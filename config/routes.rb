@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
     get 'pictures' => 'pictures#index'
 
+    post 'pictures' => 'pictures#create'        # The word after the # sign is the name of the action to be used in controller (pictures)
+    get 'pictures/new' => 'pictures#new'
+
     get 'pictures/:id' => 'pictures#show', as: 'picture'    
 end
   # The priority is based upon order of creation: first created -> highest priority.
